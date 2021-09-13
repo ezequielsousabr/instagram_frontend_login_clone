@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Importações -->
+	<link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/2111/2111463.png" type="x-icon/image">
+	<!-- MetaInformações -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Ezequiel Sousa, Webdeveloper">
+	<meta name="description" content="Clone pagina do instagram projeto educacional">
+	<meta name="keywords" content="Clone do Instagram">
+	<!-- Title -->
+	<title>Clone Instagram Projeto Educacional</title>
+	<!-- Style Interno -->
+	<style>
+		/* Module Bootstrap Import */
+		@import "./node_modules/bootstrap/dist/css/bootstrap.css";
+
+		/* Import Fonts Google */
+
+		/*
+		font-family: 'Dancing Script', cursive;
+		font-family: 'Lobster', cursive;
+		*/
+		@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Lobster&display=swap');
+
+		@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+		body {
+			overflow-x: hidden;
+			height: 100%;
+		}
+
+		.logo-instagram {
+			font-family: 'Playball', cursive;
+			font-size: 55px;
+			font-weight: 500;
+			color: rgb(25,25,25);
+		}
+
+		@media(max-width: 769px){
+			.logo-instagram {
+				font-size: 30px;
+			}
+		}
+
+		@media(max-width: 578px){
+			.logo-instagram {
+				font-size: 30px;
+			}
+		}
+
+		.line::before, .line::after {
+			display: inline-block;
+			position: relative;
+			width: 150px;height: 2px;
+			content: "";
+			border-bottom: 1px solid grey;
+			color: #DFDBDB;
+			margin: auto 10px;
+		}
+
+		.line::before {
+			top: auto; bottom: 5px;
+			right: auto; left: 0;
+		}
+
+		.line::after {
+			top: auto; bottom: 5px;
+			right: 0; left: auto;
+		}
+
+		@media(max-width: 578px){
+			figure {
+				display: none;
+			}
+
+			.line::before, .line::after {
+				width: 100px;
+				color: #DFDBDB;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container-sm-fluid container-lg-fluid container-md-fluid">
+		<div class="row justify-content-center align-middle my-5 mx-0">
+			<div class="col-sm-4">
+				<!-- Imagem de Ilustração -->
+				<figure>
+					<img class="img-fluid" src="./img/43cc71bb1b43.png" alt="instagram login image" />
+				</figure>
+			</div>
+			<div class="col-sm-4">
+				<!-- Formulario de Login -->
+				<div class="container-sm-fluid h-100">
+					<form class="rounded-2 border border-1 border-secondary py-5 px-1 bg-light bg-gradient">
+						<div class="d-block h1 text-center text-dark mb-5 logo-instagram">Instagram</div>
+						<fieldset class="d-block mx-auto px-4">
+							<div class="mb-3">
+								<input type="email" class="form-control form-control-md" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Telefone, nome de usuário ou email">
+							</div>
+							<div class="mb-3">
+								<input type="password" class="form-control form-control-md" id="exampleInputPassword1" placeholder="Senha">
+							</div>
+							<div class="d-grid">
+								<button class="btn btn-primary btn-md" type="button">Entrar</button>
+							</div>
+						</fieldset>
+						<div class="my-3 mx-5 text-center text-secondary fs-6 line my-4 mx-auto">Ou</div>
+						<div class="fs-6 text-center text-primary mb-3">
+							<div class="d-flex flex-row flex-nowrap justify-content-center align-middle">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook my-auto mx-1" viewBox="0 0 16 16">
+								  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+								</svg>
+								<a class="link-primary text-decoration-none fw-bolder" href="#" target="_self">Entrar com Facebook</a>
+							</div>
+						</div>
+						<div class="d-block text-center">
+							<small><a class="text-decoration-none" href="#" target="_self">Esqueceu a Senha?</a></small>
+						</div>
+					</form>
+					<div class="my-3 mx-auto py-3 px-4 text-center rounded-2 border border-1 border-secondary fs-6">
+						<small>Não tem conta?<span class="mx-2"><a class="fw-bolder text-decoration-none" href="#" target="_self">Cadastre-se</a></span></small>
+					</div>
+					<div class="text-dark text-center fs-6">Obtenha o Aplicativo</div>
+					<div class="row justify-content-center align-middle my-3">
+						<img class="img-fluid w-50" src="./img/68006a2bb372.png" alt="obtenha o aplicativo" />
+
+						<img class="img-fluid w-50" src="./img/2f2a0c05b2f3.png" alt="obtenha o aplicativo" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>
