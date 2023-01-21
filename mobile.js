@@ -1,0 +1,1 @@
+const mobileImg = document.getElementsByTagName('figure');

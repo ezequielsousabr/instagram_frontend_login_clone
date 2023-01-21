@@ -1,103 +1,215 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-	<!-- Importações -->
-	<link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/2111/2111463.png" type="x-icon/image">
-	<!-- MetaInformações -->
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="Ezequiel Sousa, Webdeveloper">
+	<meta http-equiv="UA-Compatible" content="IE=edge">
+	<meta name="author" content="Ezequiel Sousa, Freelancer">
 	<meta name="description" content="Clone pagina do instagram projeto educacional">
-	<meta name="keywords" content="Clone do Instagram">
-	<!-- Title -->
+	<meta name="keywords" content="Instagram login">
+	<link rel="icon" href="#" type="x-icon/image">
 	<title>Login - Entrar no Instagram</title>
-	<!-- Style Interno -->
+
 	<style>
-		/* Bootstrap 5 Import */
+
 		@import "./node_modules/bootstrap/dist/css/bootstrap.css";
 
-		/* Import Fonts Google */
-
-		/*
-		font-family: 'Dancing Script', cursive;
-		font-family: 'Lobster', cursive;
-		*/
-		@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Lobster&display=swap');
-
-		@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
-
-		body {
-			overflow-x: hidden;
-			height: 100%;
+		*{
+			font-family: Arial, sans-serif;
+			font-size: small;
+			margin: 0; padding: 0;
+			box-sizing: border-box;
 		}
 
-		.logo-instagram {
-			font-family: 'Playball', cursive;
-			font-size: 55px;
-			font-weight: 500;
+		body{
+			background-color: #fafafa;
+		}
+
+		@font-face{
+			font-family: "Vegan";
+			src:url('./vegan-style-font/VeganStylePersonalUse-5Y58.ttf')
+		}
+
+		@font-face{
+			font-family: "Lemon Jelly";
+			src: url('./lemon-jelly-font/LemonJellyPersonalUse-dEqR.ttf')
+		}
+
+		.row{
+			padding: 3%;
+		}
+
+		.logoimg{
+			position: relative;
+		}
+
+		.logoimg .img-fluid{
+			object-fit: cover;
+			text-align: center;
+			margin: auto auto;
+		}
+
+		.h1,
+		.h2,
+		.h3,
+		.h4,
+		.h5,
+		.h6{
+			font-family: "Lemon Jelly";
+			font-size: 5rem;
 			color: rgb(25,25,25);
+			word-spacing: -1px;
+			letter-spacing: 2px;
 		}
 
-		@media(max-width: 769px){
-			.logo-instagram {
-				font-size: 30px;
-			}
+		.ou{
+			font-size: 12px !important;
+			text-transform: uppercase;
+			font-weight: 700;
+			display: block;
+			position: relative;
+			margin: auto 5px;
 		}
 
-		@media(max-width: 578px){
-			.logo-instagram {
-				font-size: 30px;
-			}
+		.line{
+			top: auto;
+			bottom: auto;
+
 		}
 
 		.line::before, .line::after {
-			display: inline-block;
-			position: relative;
-			width: 150px;height: 2px;
+			display: flex;
+			align-items: center;
+			flex-wrap: nowrap;
+			position: absolute;
+			width: 40%;height: 2px;
 			content: "";
-			border-bottom: 1px solid grey;
-			color: #DFDBDB;
+			border-bottom: 1px solid #d4d3d3;
+			color: #ebe6e6;
 			margin: auto 10px;
 		}
 
 		.line::before {
-			top: auto; bottom: 5px;
-			right: auto; left: 0;
+			top: 10px; bottom: auto;
+			right: auto; left: auto;
 		}
 
 		.line::after {
-			top: auto; bottom: 5px;
+			top: auto; bottom: 7px;
 			right: 0; left: auto;
 		}
 
-		@media(max-width: 578px){
-			figure {
-				display: none;
-			}
+		.btn{
+			border-radius: 1rem;
+			background-color: #4bb4f8;
+			cursor: default !important;
+		}
 
-			.line::before, .line::after {
-				width: 100px;
-				color: #DFDBDB;
-			}
+		.btn:active{
+			outline: none !important;
+		}
+
+		.btn:hover{
+			background-color: #4bb4f8;
+		}
+
+		.form-control{
+			height: 35px !important;
+		}
+
+		form{
+			padding: 13%;
+		}
+
+		.list-group{
+			display: flex;
+			align-items: center;
+			flex-flow: row wrap;
+			justify-content: center;
+			gap: .1%;
+		}
+
+		.list-group-item{
+			background-color: transparent;
+			padding: 5px;
+			border: none;
+		}
+
+		ul li{
+			list-style: none;
+		}
+
+		a{
+			display: inline;
+			font-size: small;
+			text-decoration: none;
+			color: rgb(141, 140, 140);
+		}
+
+		a:hover{
+			color: rgb(141, 140, 140);
+			text-decoration: underline;
+			cursor: default;
+		}
+
+		footer{
+			padding: 5% 7%;
+		}
+
+		.foocopy{
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: center;
+			align-items: center;
+			padding: 1%;
+		}
+
+		select{
+			border: none;
+			background-color: transparent;
+		}
+
+		select,p{
+			font-size: small;
+			color: rgb(141, 140, 140);
+			margin: 0;
+		}
+
+		p{
+			font-size: small;
+		}
+
+		.app{
+			object-fit: fill;
+			width: 150px;
+			height: 100%;
+		}
+
+		a.app:hover{
+			cursor: pointer;
+		}
+
+		.entrar{
+			font-weight: 700;
 		}
 
 	</style>
+
 </head>
 <body>
-	<div class="container-sm-fluid container-lg-fluid container-md-fluid">
-		<div class="row justify-content-center align-middle my-5 mx-0">
-			<div class="col-sm-4">
-				<!-- Imagem de Ilustração -->
+	<div class="container">
+		<div class="row justify-content-center align-middle">
+			<div class="col-sm-5">
 				<figure>
-					<img class="img-fluid" src="./img/43cc71bb1b43.png" alt="instagram login image" />
+					<img class="img-fluid" src="./img/ItTndlZM2n2.png" alt="instagram login" />
 				</figure>
 			</div>
 			<div class="col-sm-4">
-				<!-- Formulario de Login -->
-				<div class="container-sm-fluid h-100">
-					<form class="rounded-2 border border-1 border-secondary py-5 px-1 bg-light bg-gradient">
-						<div class="d-block h1 text-center text-dark mb-5 logo-instagram">Instagram</div>
-						<fieldset class="d-block mx-auto px-4">
+				<div>
+					<form class="rounded-2 border border-1 border-secondary bg-white bg-gradient">
+						<h1 class="h1 text-center text-dark mb-5">Instagram</h1>
+						<fieldset>
 							<div class="mb-3">
 								<input type="email" class="form-control form-control-md" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Telefone, nome de usuário ou email">
 							</div>
@@ -105,10 +217,10 @@
 								<input type="password" class="form-control form-control-md" id="exampleInputPassword1" placeholder="Senha">
 							</div>
 							<div class="d-grid">
-								<button class="btn btn-primary btn-md" type="button">Entrar</button>
+								<button class="btn btn-primary btn-md border-0 entrar" type="button">Entrar</button>
 							</div>
 						</fieldset>
-						<div class="my-3 mx-5 text-center text-secondary fs-6 line my-4 mx-auto">Ou</div>
+						<p class="my-3 mx-5 text-center text-secondary fs-6 line my-4 mx-auto ou">Ou</p>
 						<div class="fs-6 text-center text-primary mb-3">
 							<div class="d-flex flex-row flex-nowrap justify-content-center align-middle">
 								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook my-auto mx-1" viewBox="0 0 16 16">
@@ -118,7 +230,7 @@
 							</div>
 						</div>
 						<div class="d-block text-center">
-							<small><a class="text-decoration-none" href="#" target="_self">Esqueceu a Senha?</a></small>
+							<a class="text-decoration-none" href="#" target="_self"><small>Esqueceu a Senha?</small></a>
 						</div>
 					</form>
 					<div class="my-3 mx-auto py-3 px-4 text-center rounded-2 border border-1 border-secondary fs-6">
@@ -126,14 +238,42 @@
 					</div>
 					<div class="text-dark text-center fs-6">Obtenha o Aplicativo</div>
 					<div class="row justify-content-center align-middle my-3">
-						<img class="img-fluid w-50" src="./img/68006a2bb372.png" alt="obtenha o aplicativo" />
-
-						<img class="img-fluid w-50" src="./img/2f2a0c05b2f3.png" alt="obtenha o aplicativo" />
+						<a class="app" href="#" target="_self">
+						<img class="img-fluid" src="./img/68006a2bb372.png" alt="obtenha o aplicativo" /></a>
+						<a class="app" href="#" target="_self">
+						<img class="img-fluid" src="./img/2f2a0c05b2f3.png" alt="obtenha o aplicativo" /></a>
 					</div>
 				</div>
 			</div>
 		</div>
+		<footer>
+			<ul class="list-group">
+				<li class="list-group-item"><a href="#">Meta</a></li>
+				<li class="list-group-item"><a href="#">Sobre</a></li>
+				<li class="list-group-item"><a href="#">Blog</a></li>
+				<li class="list-group-item"><a href="#">Carreira</a></li>
+				<li class="list-group-item"><a href="#">Ajuda</a></li>
+				<li class="list-group-item"><a href="#">API</a></li>
+				<li class="list-group-item"><a href="#">Privacidade</a></li>
+				<li class="list-group-item"><a href="#">Termos</a></li>
+				<li class="list-group-item"><a href="#">Principais Contas</a></li>
+				<li class="list-group-item"><a href="#">Localizações</a></li>
+				<li class="list-group-item"><a href="#">Instagram Lite</a></li>
+				<li class="list-group-item"><a href="#">Carregamento de contatos e não usuários</a></li>
+			</ul>
+			<div class="foocopy">
+				<select name="language">
+					<optgroup>
+						<option value="pt">Português (Brasil)</option>
+						<option value="us">English</option>
+						<option value="us">Desk</option>
+					</optgroup>
+				</select>
+				<p>&copy; 2023 Instagram from meta</p>
+			</div>
+		</footer>
 	</div>
 	<script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="mobile.js"></script>
 </body>
 </html>
